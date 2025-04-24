@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TeenFront</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    section {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+    section.revealed {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  <!-- Navigation -->
+  <nav class="p-5 fixed w-full bg-black z-50 flex justify-between items-center border-b border-white shadow-md">
+    <h1 class="text-2xl font-extrabold tracking-wide">TeenFront</h1>
+    <div class="space-x-6 font-semibold">
+      <a href="#home" class="hover:text-gray-300 transition">Home</a>
+      <a href="#goal" class="hover:text-gray-300 transition">Our Goal</a>
+      <a href="#founders" class="hover:text-gray-300 transition">Founders</a>
+      <a href="#about" class="hover:text-gray-300 transition">About</a>
+      <a href="#join" class="hover:text-gray-300 transition">Join Us</a>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="min-h-screen flex flex-col justify-center items-center pt-32 px-6 text-center">
+    <h2 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Building the Next-Gen<br>Changemakers</h2>
+    <p class="text-xl md:text-2xl text-gray-300 font-semibold max-w-3xl">TeenFront is a community-led initiative where passionate teens unite to launch impactful projects and close societal gaps.</p>
+  </section>
+
+  <!-- Our Goal -->
+  <section id="goal" class="min-h-screen flex items-center justify-center px-6 py-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-14 max-w-6xl">
+      <div>
+        <h3 class="text-4xl font-bold mb-4">🌟 What We Do</h3>
+        <ul class="list-disc pl-6 text-gray-300 space-y-3 text-lg font-semibold">
+          <li>Launch social impact projects led by youth</li>
+          <li>Host webinars and invite experts</li>
+          <li>Teach real-world skills schools don’t cover</li>
+          <li>Raise awareness, run drives, and mentor</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold mb-4">❓ Why TeenFront?</h3>
+        <p class="text-gray-300 text-lg font-semibold">Because the system won’t change — unless we do. We’re tired of being told what to study without knowing why. This is for the rebels, thinkers, and dreamers who want more.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founders -->
+  <section id="founders" class="min-h-screen flex items-center justify-center px-6 text-center py-20">
+    <div class="max-w-3xl">
+      <h3 class="text-4xl font-bold mb-6">👥 Meet the Founders</h3>
+      <p class="text-gray-300 text-lg font-semibold">We’re building a youth movement that inspires real change. Through guided leadership, internships, and active community projects, we aim to educate and empower every teen.</p>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="min-h-screen flex items-center justify-center px-6 text-center py-20">
+    <div class="max-w-4xl">
+      <h3 class="text-4xl font-bold mb-6">🔍 About TeenFront</h3>
+      <p class="text-gray-300 text-lg font-semibold">
+        TeenFront is a safe space for teens — where we don’t just talk about change, we make it. We build real projects, help communities, and come together to launch ideas that matter. The bigger the community, the more lives we touch. We believe in uplifting each other and motivating more young minds to step up.
+      </p>
+    </div>
+  </section>
+
+  <!-- Join Us -->
+  <section id="join" class="min-h-screen flex items-center justify-center px-6 text-center py-20">
+    <div class="max-w-3xl w-full">
+      <h3 class="text-4xl font-bold mb-6">🚀 Join TeenFront</h3>
+      <p class="text-gray-300 text-lg font-semibold mb-8">Apply as an intern, volunteer, or core member. Be a part of something real.</p>
+      <iframe src="https://forms.gle/7rE4xuWisFc3iKaUA" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" class="rounded-lg border border-white">Loading…</iframe>
+    </div>
+  </section>
+
+  <!-- Scroll Reveal Script -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const reveal = () => {
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          section.classList.add("revealed");
+        }
+      });
+    };
+    window.addEventListener("scroll", reveal);
+    window.addEventListener("load", reveal);
+  </script>
+</body>
+</html>

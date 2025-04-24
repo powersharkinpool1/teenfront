@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TeenFront</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://unpkg.com/scrollreveal"></script>
   <style>
@@ -23,75 +23,89 @@
       opacity: 1;
       transform: none;
     }
+    .arrow {
+      font-size: 3rem;
+      margin-top: 20px;
+      cursor: pointer;
+    }
   </style>
 </head>
-<body class="bg-black text-white text-base">
+<body class="bg-black text-white">
 
   <!-- Navigation -->
-  <nav class="fixed top-0 w-full bg-black text-white border-b border-white p-4 z-50">
-    <div class="flex justify-between items-center">
-      <h1 class="text-lg font-extrabold tracking-wide">TeenFront</h1>
-      <div class="text-sm space-x-3">
+  <nav class="p-5 fixed w-full bg-black z-50 flex justify-between items-center border-b border-white shadow-md">
+    <div class="space-x-6 font-semibold w-full flex justify-between">
+      <div class="flex space-x-6">
         <a href="#home" class="hover:text-gray-300 transition">Home</a>
-        <a href="#goal" class="hover:text-gray-300 transition">Goal</a>
+        <a href="#goal" class="hover:text-gray-300 transition">Our Goal</a>
+      </div>
+      <h1 class="text-2xl font-extrabold tracking-wide">TeenFront</h1>
+      <div class="flex space-x-6">
         <a href="#founders" class="hover:text-gray-300 transition">Founders</a>
-        <a href="#about" class="hover:text-gray-300 transition">About</a>
-        <a href="#join" class="hover:text-gray-300 transition">Join</a>
+        <a href="#join" class="hover:text-gray-300 transition">Join Us</a>
       </div>
     </div>
   </nav>
 
-  <!-- Home -->
-  <section id="home" class="pt-28 px-6 pb-16 text-center">
-    <h2 class="text-3xl font-extrabold mb-4 leading-snug">Building the Next-Gen<br>Changemakers</h2>
-    <p class="text-gray-300 font-semibold">TeenFront is a youth-led initiative where passionate teens unite to launch impactful projects and close societal gaps.</p>
+  <!-- Home Section -->
+  <section id="home" class="min-h-screen flex flex-col justify-center items-center pt-32 px-6 text-center">
+    <h2 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Building the Next-Gen<br>Changemakers</h2>
+    <p class="text-xl md:text-2xl text-gray-300 font-semibold max-w-3xl">TeenFront is a community-led initiative where passionate teens unite to launch impactful projects and close societal gaps.</p>
+    <!-- Arrow Scroll -->
+    <a href="#join" class="arrow text-white">&#8595; Register Now</a>
   </section>
 
-  <!-- Goal -->
-  <section id="goal" class="px-6 py-16 text-left space-y-8">
-    <div>
-      <h3 class="text-2xl font-bold mb-2">🌟 What We Do</h3>
-      <ul class="list-disc pl-5 text-gray-300 space-y-2 font-semibold">
-        <li>Run social impact projects led by teens</li>
-        <li>Host inspiring webinars with real experts</li>
-        <li>Teach life skills schools forget</li>
-        <li>Organize drives, awareness events, and mentoring</li>
-      </ul>
-    </div>
-    <div>
-      <h3 class="text-2xl font-bold mb-2">❓ Why TeenFront?</h3>
-      <p class="text-gray-300 font-semibold">Because the system won’t change unless we do. This is for rebels, thinkers, and doers who want real-world change.</p>
+  <!-- Our Goal -->
+  <section id="goal" class="min-h-screen flex items-center justify-center px-6 py-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-14 max-w-6xl">
+      <div>
+        <h3 class="text-4xl font-bold mb-4">🌟 What We Do</h3>
+        <ul class="list-disc pl-6 text-gray-300 space-y-3 text-lg font-semibold">
+          <li>Launch social impact projects led by youth</li>
+          <li>Host webinars and invite experts</li>
+          <li>Teach real-world skills schools don’t cover</li>
+          <li>Raise awareness, run drives, and mentor</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold mb-4">❓ Why TeenFront?</h3>
+        <p class="text-gray-300 text-lg font-semibold">Because the system won’t change — unless we do. We’re tired of being told what to study without knowing why. This is for the rebels, thinkers, and dreamers who want more.</p>
+      </div>
     </div>
   </section>
 
   <!-- Founders -->
-  <section id="founders" class="px-6 py-16 text-center">
-    <h3 class="text-2xl font-bold mb-4">👥 Meet the Founders</h3>
-    <p class="text-gray-300 font-semibold">We're teens just like you, who believe in making a difference. Through projects, leadership, and teamwork — we’re building something real.</p>
+  <section id="founders" class="min-h-screen flex items-center justify-center px-6 text-center py-20">
+    <div class="max-w-3xl">
+      <h3 class="text-4xl font-bold mb-6">👥 Meet the Founders</h3>
+      <!-- Partition between Founder and Co-Founder (Vertical) -->
+      <div class="border-b border-white mb-6 pb-6">
+        <h4 class="text-2xl font-semibold">Founder</h4>
+        <p class="text-gray-300 text-lg font-semibold">Our visionary who started the journey of TeenFront, shaping a platform for youth-led impact.</p>
+      </div>
+      <div>
+        <h4 class="text-2xl font-semibold">Co-Founder</h4>
+        <p class="text-gray-300 text-lg font-semibold">The second pillar who helped in building the vision, collaborating for a greater cause.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="px-6 py-16 text-center">
-    <h3 class="text-2xl font-bold mb-4">🔍 About TeenFront</h3>
-    <p class="text-gray-300 font-semibold">
-      TeenFront is a safe space for teenagers. We build real projects, help people, and collaborate on ideas. Our mission is to grow together — so we can reach farther and inspire more change.
-    </p>
+  <!-- Join Us -->
+  <section id="join" class="min-h-screen flex items-center justify-center px-6 text-center py-20">
+    <div class="max-w-3xl w-full">
+      <h3 class="text-4xl font-bold mb-6">🚀 Join TeenFront</h3>
+      <p class="text-gray-300 text-lg font-semibold mb-8">Apply as an intern, volunteer, or core member. Be a part of something real.</p>
+      <iframe src="https://forms.gle/7rE4xuWisFc3iKaUA" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" class="rounded-lg border border-white">Loading…</iframe>
+    </div>
   </section>
 
-  <!-- Join -->
-  <section id="join" class="px-6 py-16 text-center">
-    <h3 class="text-2xl font-bold mb-4">🚀 Join TeenFront</h3>
-    <p class="text-gray-300 font-semibold mb-6">Become an intern, volunteer, or core team member. Be a part of something that actually matters.</p>
-    <iframe src="https://forms.gle/7rE4xuWisFc3iKaUA" width="100%" height="600" frameborder="0" class="rounded-lg border border-white">Loading…</iframe>
-  </section>
-
-  <!-- Scroll Reveal -->
+  <!-- Scroll Reveal Script -->
   <script>
     const sections = document.querySelectorAll("section");
     const reveal = () => {
       sections.forEach(section => {
         const top = section.getBoundingClientRect().top;
-        if (top < window.innerHeight - 50) {
+        if (top < window.innerHeight - 100) {
           section.classList.add("revealed");
         }
       });

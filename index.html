@@ -24,9 +24,27 @@
       transform: none;
     }
     .arrow {
-      font-size: 3rem;
+      font-size: 2rem;
       margin-top: 20px;
       cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .nav-links {
+        margin-top: 10px;
+      }
+      .logo {
+        text-align: center;
+        width: 100%;
+      }
+      .section-padding {
+        padding: 6rem 2rem 3rem 2rem; /* Increased padding for better spacing */
+      }
     }
   </style>
 </head>
@@ -34,12 +52,12 @@
 
   <!-- Navigation -->
   <nav class="p-5 fixed w-full bg-black z-50 flex justify-between items-center border-b border-white shadow-md">
-    <div class="space-x-6 font-semibold w-full flex justify-between">
+    <div class="nav-container w-full flex justify-between items-center">
       <div class="flex space-x-6">
         <a href="#home" class="hover:text-gray-300 transition">Home</a>
         <a href="#goal" class="hover:text-gray-300 transition">Our Goal</a>
       </div>
-      <h1 class="text-2xl font-extrabold tracking-wide">TeenFront</h1>
+      <h1 class="text-2xl font-extrabold tracking-wide logo">TeenFront</h1>
       <div class="flex space-x-6">
         <a href="#founders" class="hover:text-gray-300 transition">Founders</a>
         <a href="#join" class="hover:text-gray-300 transition">Join Us</a>
@@ -56,7 +74,7 @@
   </section>
 
   <!-- Our Goal -->
-  <section id="goal" class="min-h-screen flex items-center justify-center px-6 py-20">
+  <section id="goal" class="min-h-screen flex items-center justify-center px-6 py-20 section-padding">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-14 max-w-6xl">
       <div>
         <h3 class="text-4xl font-bold mb-4">🌟 What We Do</h3>

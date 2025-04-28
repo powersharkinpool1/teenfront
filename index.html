@@ -3,16 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TeenFront</title>
+  <meta name="description" content="TeenFront: A community of young changemakers launching impactful projects. Join us and make a real difference."/>
+  <title>TeenFront | Building Young Changemakers</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://unpkg.com/scrollreveal"></script>
+
   <style>
     html {
       scroll-behavior: smooth;
     }
     body {
       font-family: 'Inter', sans-serif;
+      background-color: #000; /* All black background */
+      color: #fff; /* White text for contrast */
     }
     section {
       opacity: 0;
@@ -29,6 +34,45 @@
       cursor: pointer;
       display: inline-block;
       text-decoration: none;
+      transition: transform 0.3s;
+    }
+    .arrow:hover {
+      transform: translateY(5px);
+    }
+    .footer-btn {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 9999px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .footer-btn:hover {
+      background-color: #444;
+      transform: translateY(-2px);
+    }
+    /* All sections with black background */
+    .gradient-bg {
+      background-color: #000; /* Full black background */
+    }
+    .gradient-text {
+      color: #fff; /* White text */
+    }
+    .gradient-button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 9999px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .gradient-button:hover {
+      background-color: #444;
+      transform: translateY(-2px);
     }
     @media (max-width: 768px) {
       .nav-container {
@@ -42,9 +86,6 @@
         text-align: center;
         width: 100%;
       }
-      .section-padding {
-        padding: 6rem 2rem 3rem 2rem; /* Increased padding for better spacing */
-      }
       .goal-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -52,36 +93,36 @@
     }
   </style>
 </head>
-<body class="bg-black text-white">
 
- <!-- Navigation -->
+<body class="overflow-x-hidden">
+
+<!-- Navigation -->
 <nav class="p-5 fixed w-full bg-black z-50 border-b border-white shadow-md">
   <div class="w-full flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
-    <!-- Top logo center -->
-    <h1 class="text-2xl font-extrabold tracking-wide text-center md:text-left">TeenFront</h1>
-    
-    <!-- Navigation links -->
+    <h1 class="text-2xl font-extrabold tracking-wide text-center md:text-left text-white">TeenFront</h1>
     <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-2 md:mt-0">
-      <a href="#home" class="hover:text-gray-300 transition">Home</a>
-      <a href="#goal" class="hover:text-gray-300 transition">Our Goal</a>
-      <a href="#founders" class="hover:text-gray-300 transition">Founders</a>
-      <a href="#join" class="hover:text-gray-300 transition">Join Us</a>
+      <a href="#home" class="hover:text-gray-300 transition text-white">Home</a>
+      <a href="#goal" class="hover:text-gray-300 transition text-white">Our Goal</a>
+      <a href="#founders" class="hover:text-gray-300 transition text-white">Founders</a>
+      <a href="#join" class="hover:text-gray-300 transition text-white">Join Us</a>
     </div>
   </div>
 </nav>
 
-
-  <!-- Home Section -->
-  <section id="home" class="min-h-screen flex flex-col justify-center items-center pt-32 px-6 text-center">
-    <h2 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Building the Next-Gen<br>Changemakers</h2>
-    <p class="text-xl md:text-2xl text-gray-300 font-semibold max-w-3xl">TeenFront is a community-led initiative where passionate teens unite to launch impactful projects and close societal gaps.</p>
-    <!-- Arrow Scroll -->
+<!-- Home Section -->
+<section id="home" class="min-h-screen flex flex-col justify-center items-center pt-32 px-6 text-center bg-black">
+  <h2 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight gradient-text">Building the Next-Gen<br>Changemakers</h2>
+  <p class="text-xl md:text-2xl text-gray-300 font-semibold max-w-3xl">TeenFront is a community-led initiative where passionate teens unite to launch impactful projects and close societal gaps.</p>
+  <div class="flex space-x-6 mt-6">
     <a href="#join" class="arrow text-white">&#8595; Register Now</a>
-  </section>
-<!-- Our Goal -->
-<section id="goal" class="min-h-screen flex items-center justify-center px-6 py-20">
+    <a href="https://www.instagram.com/teenfront/" target="_blank" class="footer-btn">📸 Follow @teenfront</a>
+  </div>
+</section>
+
+<!-- Our Goal Section -->
+<section id="goal" class="min-h-screen flex items-center justify-center px-6 py-20 gradient-bg">
   <div class="max-w-4xl text-center">
-    <h3 class="text-4xl font-bold mb-6">🌟 Our Goal</h3>
+    <h3 class="text-4xl font-extrabold mb-6 gradient-text">🌟 Our Goal</h3>
     <ul class="text-gray-300 text-lg font-semibold space-y-4 list-disc list-inside text-left mx-auto max-w-2xl">
       <li>Uplift young minds by giving them purpose and direction.</li>
       <li>Help communities through hands-on projects and drives.</li>
@@ -91,22 +132,24 @@
     </ul>
   </div>
 </section>
+
 <!-- Founders Section -->
 <section id="founders" class="min-h-screen flex items-center justify-center px-6 text-center py-20 bg-black">
   <div class="max-w-5xl w-full">
-    <h3 class="text-4xl font-bold mb-10 text-white">👥 Meet the Founders</h3>
+    <h3 class="text-4xl font-extrabold mb-10 text-white">👥 Meet the Founders</h3>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
       <!-- Founder -->
       <div class="text-center">
-        <img src="images/aayush.jpg" alt="Aayush Sharma" class="w-48 h-48 mx-auto rounded-full object-cover mb-4 border-4 border-white">
-        <h4 class="text-2xl font-bold text-white">Aayush Sharma</h4>
+        <img src="images/aayush.jpg" alt="Aayush Sharma - Founder" class="founder-img w-48 h-48 mx-auto rounded-full object-cover mb-4 border-4 border-white">
+        <h4 class="text-2xl font-extrabold text-white">Aayush Sharma</h4>
         <p class="text-gray-300 text-lg font-semibold mt-2">Founder</p>
         <p class="text-gray-300 text-lg mt-4 px-4">Aayush is a passionate MUN participant and advocate for helping others. He is pursuing Commerce in 11th grade in Gurgaon. Aayush founded TeenFront to bring real-life exposure and opportunities to students often limited by academics alone, believing that teamwork drives real change.</p>
       </div>
+
       <!-- Co-Founder -->
       <div class="text-center">
-        <img src="images/anshaj.jpg" alt="Anshaj Dubey" class="w-48 h-48 mx-auto rounded-full object-cover mb-4 border-4 border-white">
-        <h4 class="text-2xl font-bold text-white">Anshaj Dubey</h4>
+        <img src="images/anshaj.jpg" alt="Anshaj Dubey - Co-Founder" class="founder-img w-48 h-48 mx-auto rounded-full object-cover mb-4 border-4 border-white">
+        <h4 class="text-2xl font-extrabold text-white">Anshaj Dubey</h4>
         <p class="text-gray-300 text-lg font-semibold mt-2">Co-Founder</p>
         <p class="text-gray-300 text-lg mt-4 px-4">Anshaj is a passionate MUN enthusiast, opportunist, and empath. Pursuing Humanities in 11th grade from Kanpur, he brings immense dedication and hard work to TeenFront, determined to create meaningful change through leadership and collaboration.</p>
       </div>
@@ -114,30 +157,50 @@
   </div>
 </section>
 
+<!-- Join Us Section -->
+<section id="join" class="min-h-screen flex items-center justify-center px-6 text-center py-20 gradient-bg">
+  <div class="max-w-3xl w-full">
+    <h3 class="text-4xl font-extrabold mb-6 gradient-text">🚀 Join TeenFront</h3>
+    <p class="text-gray-300 text-lg font-semibold mb-8">Apply as an intern, volunteer, or core member. Be a part of something real.</p>
+    <iframe src="https://forms.gle/7rE4xuWisFc3iKaUA" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" class="rounded-lg border border-white shadow-lg">Loading…</iframe>
+  </div>
+</section>
 
+<!-- Footer -->
+<footer class="py-10 bg-black text-center border-t border-gray-700 mt-10">
+  <p class="text-lg font-semibold mb-4">Follow our journey on Instagram!</p>
+  <a href="https://www.instagram.com/teenfront/" target="_blank" class="footer-btn">
+    📸 Follow @teenfront
+  </a>
+  <p class="text-gray-500 text-sm mt-6">© 2025 TeenFront. All rights reserved.</p>
+</footer>
 
-  <!-- Join Us -->
-  <section id="join" class="min-h-screen flex items-center justify-center px-6 text-center py-20">
-    <div class="max-w-3xl w-full">
-      <h3 class="text-4xl font-bold mb-6">🚀 Join TeenFront</h3>
-      <p class="text-gray-300 text-lg font-semibold mb-8">Apply as an intern, volunteer, or core member. Be a part of something real.</p>
-      <iframe src="https://forms.gle/7rE4xuWisFc3iKaUA" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" class="rounded-lg border border-white">Loading…</iframe>
-    </div>
-  </section>
+<!-- Smooth Scroll and Reveal Script -->
+<script>
+  const sections = document.querySelectorAll("section");
+  const reveal = () => {
+    sections.forEach(section => {
+      const top = section.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        section.classList.add("revealed");
+      }
+    });
+  };
+  window.addEventListener("scroll", reveal);
+  window.addEventListener("load", reveal);
 
-  <!-- Scroll Reveal Script -->
-  <script>
-    const sections = document.querySelectorAll("section");
-    const reveal = () => {
-      sections.forEach(section => {
-        const top = section.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) {
-          section.classList.add("revealed");
-        }
+  // Smooth scroll with offset for fixed navbar
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      window.scrollTo({
+        top: target.offsetTop - 80,
+        behavior: 'smooth'
       });
-    };
-    window.addEventListener("scroll", reveal);
-    window.addEventListener("load", reveal);
-  </script>
+    });
+  });
+</script>
+
 </body>
 </html>
